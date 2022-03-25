@@ -1,11 +1,23 @@
 :root {
-    --dashed-border: 1px dashed black;
+    --aqua-color: aqua;
+}
+
+body {
+    background-color: gray;
+    margin-bottom: 0;
+}
+
+header {
+    background-color: var(--aqua-color);
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    width: 100%;
+    background-color: var(--aqua-color);
+    margin-top: 2%;
 }
 
 h1,p {
@@ -14,12 +26,23 @@ h1,p {
 
 h2 {
     border: 1px solid black;
+    border-radius: 8px;
+    background-color: gray;
+    flex-wrap: wrap;
+}
+
+section h2 {
+    position: relative;
+    margin-top: -20px;
 }
 
 section {
-    border: var(--dashed-border);
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px dashed black;
+    background-color: bisque;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+
 }
 
 @media screen and (max-width 992px) {
