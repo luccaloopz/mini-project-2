@@ -1,9 +1,35 @@
-body {
+:root {
+    --dashed-border: 1px dashed black;
+}
+
+main {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
 }
 
 h1,p {
     text-align: center;
+}
+
+h2 {
+    border: 1px solid black;
+}
+
+section {
+    border: var(--dashed-border);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width 992px) {
+    
+}
+
+@media screen and (min-width 768px) {
+    
+}
+
+@media screen and (max-width 768px) {
+    
 }
