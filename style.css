@@ -12,13 +12,9 @@ header {
 }
 
 main {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 50px;
-    width: 100%;
+    width: 96%;
     background-color: var(--aqua-color);
     margin-top: 2%;
-    justify-content: center;
 }
 
 h1,p {
@@ -43,7 +39,15 @@ section h2 {
 section {
     border: 1px dashed black;
     background-color: bisque;
-    width: 500px
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 0 500px;
+}
+
+section:hover {
+    box-shadow: inset 0px 0px 8px brown, 0 0 15px brown;
 }
 
 pre:active {
@@ -55,9 +59,5 @@ pre:active {
 }
 
 @media screen and (min-width 768px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    
 }
