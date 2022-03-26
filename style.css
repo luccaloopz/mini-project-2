@@ -1,5 +1,6 @@
 :root {
     --aqua-color: aqua;
+    --animation: all 1s ease-in-out;
 }
 
 body {
@@ -14,50 +15,73 @@ header {
 main {
     width: 96%;
     background-color: var(--aqua-color);
-    margin-top: 2%;
+    margin: 2rem auto;
 }
 
 h1,p {
     text-align: center;
 }
 
-h2 {
-    border: 1px solid black;
-    border-radius: 8px;
-    background-color: gray;
-    flex-wrap: wrap;
-    max-width: 60%;
-    text-align: center;
-}
-
-section h2 {
-    position: relative;
-    margin-top: -20px;
-    justify-content: center;
-}
-
-section {
-    border: 1px dashed black;
-    background-color: bisque;
-    width: 500px;
+main {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;  
     justify-content: center;
-    flex: 0 0 500px;
 }
 
-section:hover {
-    box-shadow: inset 0px 0px 8px brown, 0 0 15px brown;
+div{
+    flex: 1 0 100%;
 }
+
+figure:hover,
+figure:hover h2 {
+    box-shadow: inset 0px 0px 8px brown, 0 0 15px brown;
+    transition: var(--animation);
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    outline: 2px dashed green;
+    
+}
+
+figure h2 {
+    position: relative;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 100%;
+    background-color: grey;
+    margin-top: -20px;
+    justify-content: center;
+    transition: var(--animation);
+}
+
+
 
 pre:active {
     user-select: all;
 }
 
 @media screen and (min-width 992px) {
+    header {
+        width: 60%;
+    }
+    div{
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
     
 }
 
 @media screen and (min-width 768px) {
-    
+    div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card-column:last-child{
+        flex-grow: 1; 
+    }
 }
