@@ -14,7 +14,6 @@ header {
 
 main {
     width: 96%;
-    background-color: var(--aqua-color);
     margin: 2rem auto;
 }
 
@@ -22,15 +21,17 @@ h1,p {
     text-align: center;
 }
 
-main {
+section {
+    background-color: orange;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;  
+    flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 div{
     flex: 1 0 100%;
+    position: relative;
 }
 
 figure:hover,
@@ -44,7 +45,6 @@ figure {
     flex-direction: column;
     justify-content: flex-start;
     outline: 2px dashed green;
-    
 }
 
 figure h2 {
@@ -58,30 +58,18 @@ figure h2 {
     transition: var(--animation);
 }
 
-
-
 pre:active {
     user-select: all;
 }
 
+figure pre {
+    background-image: linear-gradient(lightblue, var(--aqua-color));
+}
+
 @media screen and (min-width 992px) {
-    header {
-        width: 60%;
-    }
-    div{
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
-    }
     
 }
 
 @media screen and (min-width 768px) {
-    div {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
 
-    .card-column:last-child{
-        flex-grow: 1; 
-    }
 }
