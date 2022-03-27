@@ -22,16 +22,16 @@ h1,p {
 }
 
 section {
-    background-color: orange;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 div{
-    position: relative;
-    width: 33.33%;
+    flex: 1 0 100%;
+    outline: 2px dashed green;
+    margin: 5% 10%;
 }
 
 figure:hover,
@@ -42,10 +42,8 @@ figure:hover h2 {
 
 figure {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    outline: 2px dashed green;
-    margin: 10px auto;
+    flex-direction: column; 
+    
 }
 
 figure h2 {
@@ -53,7 +51,7 @@ figure h2 {
     text-align: center;
     border: 2px solid black;
     border-radius: 100%;
-    background-color: grey;
+    background-color: rgb(228, 13, 13);
     margin-top: -20px;
     justify-content: center;
     transition: var(--animation);
@@ -65,14 +63,29 @@ pre:active {
 
 figure pre {
     background-image: linear-gradient(lightblue, var(--aqua-color));
+    position: relative;
+    display: flex;
+    justify-content: center;    
 }
 
-@media screen and (min-width 992px) {
-  div {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-  } 
+figure p {
+    padding-left: 5%;
+    padding-right: 5%;
+
 }
+code {
+    
+}
+
+
+
+@media screen and (min-width 992px) {
+    div {
+
+       
+       }
+   }
+
 
 @media screen and (min-width 768px) {
 
