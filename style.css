@@ -24,14 +24,14 @@ h1,p {
 section {
     background-color: orange;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 div{
-    flex: 1 0 100%;
     position: relative;
+    width: 33.33%;
 }
 
 figure:hover,
@@ -45,6 +45,7 @@ figure {
     flex-direction: column;
     justify-content: flex-start;
     outline: 2px dashed green;
+    margin: 10px auto;
 }
 
 figure h2 {
@@ -67,7 +68,10 @@ figure pre {
 }
 
 @media screen and (min-width 992px) {
-    
+  div {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+  } 
 }
 
 @media screen and (min-width 768px) {
