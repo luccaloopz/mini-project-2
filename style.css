@@ -31,7 +31,6 @@ section {
 div{
     flex: 1 0 100%;
     outline: 2px dashed green;
-    margin: 5% 10%;
 }
 
 figure:hover,
@@ -73,20 +72,25 @@ figure p {
     padding-right: 5%;
 
 }
-code {
-    
-}
 
 
-
-@media screen and (min-width 992px) {
+@media screen and (min-width: 768px) {
     div {
-
-       
+        flex: 0 0 50%;
+        max-width: 50%;
        }
+    
+    div:last-child {
+        flex-grow: 1;
+    }
+
    }
 
 
-@media screen and (min-width 768px) {
+@media screen and (min-width: 992px) {
+    div {
+        flex: 0 0 33.333%;
+        max-width: 33.33%;
+    }
 
 }
