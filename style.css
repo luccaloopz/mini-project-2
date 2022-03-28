@@ -36,8 +36,8 @@ section {
     justify-content: center;
 }
 
-div{
-    flex: 1 0 100%;
+div {
+    flex: 0 0 100%;
 }
 
 figure:hover,
@@ -62,8 +62,6 @@ figure h2 {
     border-radius: 30%;
     background-color: rgb(228, 13, 13);
     margin-top: -10px;
-    justify-content: center;
-    transition: var(--animation);
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -92,18 +90,11 @@ figure p {
         flex: 0 0 50%;
         max-width: 50%;
        }
-    
-    div:last-child {
-        flex-grow: 1;
-    }
-
-   }
-
+}
 
 @media screen and (min-width: 992px) {
     div {
         flex: 0 0 33.333%;
         max-width: 33.33%;
     }
-
 }
